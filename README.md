@@ -34,16 +34,33 @@ First, the summary statistics for all the given data are presented in a datafram
 
 The design specifications require that there be less than 100 PSI of variance in the suspension coils. When the manufacturing data is analyzed as a whole, this requirement is passed with a variance in the suspension coils of 62.29356 PSI.
 
-The suspension coils are grouped into lots in the given data set : `lot1`,`lot2`,`lot3`.
-Next the summary statistics are generated for each lot individually to increase the depth of the analysis.
+The suspension coils are grouped into lots in the given data set : `Lot1`,`Lot2`,`Lot3`.
+Next the summary statistics are generated for each Lot individually to increase the depth of the analysis.
 ![lot_summary](https://github.com/Jforbus/MechaCar_Statistical_Analysis/blob/main/Resources/lot_summary.png)
 
-Here we see a serious design specification requirement failure that was hidden in the original high level summary. `lot3` has a variance of 170.2861224 PSI, overrunning the allowed 100 PSI of variance by more than 70 PSI. `lot1` and `lot2` show a variance much lower than seen the the overall summary, .979 and 7.469 respectively, meaning the third lot has skewed the overall data significantly. Analyzed individually `lot1` and `lot2` pass the design requirement, but `lot3`.
+Here we see a serious design specification requirement failure that was hidden in the original high level summary. `Lot3` has a variance of 170.2861224 PSI, overrunning the allowed 100 PSI of variance by more than 70 PSI. `Lot1` and `Lot2` show a variance much lower than seen the the overall summary, .979 and 7.469 respectively, meaning the third Lot has skewed the overall data significantly. Analyzed individually `Lot1` and `Lot2` pass the design requirement, but `Lot3`.
 
-The importance of the depth of analysis is presented greatly here in the appearance of all coils passing design requirements in the total summary. Without breaking down the coils by lots the significant failure of `lot3` would have remained hidden by the relatively high quality found in the manufacturing data for the first two lots.  
+The importance of the depth of analysis is presented greatly here in the appearance of all coils passing design requirements in the total summary. Without breaking down the coils by lots the significant failure of `Lot3` would have remained hidden by the relatively high quality found in the manufacturing data for the first two Lots.  
 
 ## T-Tests on Suspension Coils
 T-Testing has been conducted on the data in `Suspension_Coil.csv` to compare the means of the PSI for the data. A population mean of 1500 PSI is assumed for the testing.
 First the total data set is tested agains the population mean:
 `t.test(sus_coil$PSI, mu=1500)`
-![tTest_total]()
+![tTest_total](https://github.com/Jforbus/MechaCar_Statistical_Analysis/blob/main/Resources/tTest_total.png)
+
+The mean for the overall data set is 1498.78. The results of this t-Test show that that there is no statistical difference the population mean and the mean of the data set. The p-value of .06 is above an assumed significance of .05, meaning the test fails to reject the null hypothesis and the variance seen in the means is attributed to randomness. 
+
+Next, the means of each Lot in the data are tested against the population mean of 1500 PSI.
+
+Lot 1:
+![tTest_Lot1](https://github.com/Jforbus/MechaCar_Statistical_Analysis/blob/main/Resources/tTest_Lot1.png)
+
+Lot 2:
+![tTest_Lot2](https://github.com/Jforbus/MechaCar_Statistical_Analysis/blob/main/Resources/tTest_Lot2.png)
+
+Lot 3:
+![tTest_Lot3](https://github.com/Jforbus/MechaCar_Statistical_Analysis/blob/main/Resources/tTest_Lot3.png)
+
+The first two lots show similar results. With means of 1500 and 1500.2 respectively there is no statistical difference seen between the population mean and the means of these data sets. The p-value of `Lot1` is 1 suggesting there is no literal difference in the means, the p-value of `Lot2` is .6 well above the significance level of .05. For both of these Lots the null hypothesis is accepted: there is no statistical difference in the means.
+
+For the third Lot the results are very different. The mean for this Lot is 1496.14, and the p-value is .042. This p-value falls below the significance level of .05, rejecting the null hypothesis: there is a statistical difference in the means that may not be attributed to randomness. This t-Test shows there is a potentially meaningful difference between the PSI data for `Lot3` and the population data.
