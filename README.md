@@ -16,7 +16,7 @@ Summary statistics are then generated from the model:
 
 Several key points can be drawn from this summary:
 - The R-squared of this model is 0.7149. Meaning this model can correctly predict the MPG of each prototype in the dataset using the other 5 variables with 71% accuracy.
-- The p-value of this model is 5.35e-11. This is well below all common significance levels, giving sufficient quantitative evedince to reject the null hypothesis and accept the alternative: The slope of the linear model is not zero.
+- The p-value of this model is 5.35e-11. This is well below all common significance levels, giving sufficient quantitative evidince to reject the null hypothesis and accept the alternative: The slope of the linear model is not zero.
 - When we examine the individual p-values of each independent variable we can determine which variables are significant and which are not. These values are as follow:
     - (Intercept)      -  5.08e-08
     - vehicle_length   -  2.60e-12
