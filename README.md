@@ -1,6 +1,7 @@
 # MechaCar_Statistical_Analysis
 
 ## Project Overview
+Using R and RStudio to conduct statistical analysis of vehicle performance and manufacturing data.
 
 ### Resources
 - Data Sources: MechaCar_mpg.csv, Suspension_Coil.csv
