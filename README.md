@@ -42,3 +42,8 @@ Here we see a serious design specification requirement failure that was hidden i
 
 The importance of the depth of analysis is presented greatly here in the appearance of all coils passing design requirements in the total summary. Without breaking down the coils by lots the significant failure of `lot3` would have remained hidden by the relatively high quality found in the manufacturing data for the first two lots.  
 
+## T-Tests on Suspension Coils
+T-Testing has been conducted on the data in `Suspension_Coil.csv` to compare the means of the PSI for the data. A population mean of 1500 PSI is assumed for the testing.
+First the total data set is tested agains the population mean:
+`t.test(sus_coil$PSI, mu=1500)`
+![tTest_total]()
