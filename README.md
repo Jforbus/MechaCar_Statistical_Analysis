@@ -66,3 +66,10 @@ Lot 3:
 The first two lots show similar results. With means of 1500 and 1500.2 respectively there is no statistical difference seen between the population mean and the means of these data sets. The p-value of `Lot1` is 1 suggesting there is no literal difference in the means, the p-value of `Lot2` is .6 well above the significance level of .05. For both of these Lots the null hypothesis is accepted: there is no statistical difference in the means.
 
 For the third Lot the results are very different. The mean for this Lot is 1496.14, and the p-value is .042. This p-value falls below the significance level of .05, rejecting the null hypothesis: there is a statistical difference in the means that may not be attributed to randomness. This t-Test shows there is a potentially meaningful difference between the PSI data for `Lot3` and the population data.
+
+## StudyDesign: MechaCar vs. Competition
+
+Statistical analysis of MechCar's performance compared to its competitors is being conducted. In order to guage the efficiency of performance MechaCar's Highway fuel efficiency will be compared to that of its competitors. The Highway fuel efficiency of the MechaCar vehicles as well as the Highway fuel efficiency of all competitor vehicles, measured in miles driven per unit of fuel, will need to be gathered in order to run this test. Once the data is gathered, cleaned, and organized, a one sample t-Test will be conducted to compare the mean Highway fuel efficiency of MechaCar's vehicles against the mean Highway fuel efficiency of of the competitor vehicles. The hypothesis being that there is a statistically significant difference between the Highway fuel efficiency of MechaCar's vehicles and its competitors, with MechaCar's Highway fuel efficiency being greater on average than that of its competitors. A significance level of 0.05 has been selected for this test.     
+
+
+
